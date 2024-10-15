@@ -1,7 +1,5 @@
 const config = {
-  isLocal: true,
-  localUrl: 'http://localhost:3000',
-  remoteUrl: 'https://api.example.com'
-};
-
-export { config };   
+    url: process.env.ENVIRONMENT === 'development' ? process.env.LOCAL_DOMAIN : process.env.ENVIRONMENT === 'production' ? process.env.REMOTE_DOMAIN : null,
+  };
+  
+  export { config };
