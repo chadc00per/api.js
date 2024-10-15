@@ -1,4 +1,4 @@
-const baseURL = config.isLocal ? config.localUrl : config.remoteUrl;
+const baseURL = config.url;
 
 async function get(endpoint) {
   try {
